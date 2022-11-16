@@ -61,6 +61,14 @@ nav ul{
 
 ul li:nth-child(1) a{
     border: none;
+    background-color: #aece6e;
+    color: black;
+    font-size: 1.5rem;
+    border-radius: .25rem;
+    padding: .2em .3em;
+}
+ul li:nth-child(3) a{
+    border: none;
     background-color: #56b7c2;
     color: white;
     font-size: 1.5rem;

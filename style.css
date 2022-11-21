@@ -12,11 +12,51 @@ a {
     text-decoration: none;
 }
 
+nav, main, .hero, .text, img, .action, footer, button {
+    margin-top: 1rem;
+}
+
+.text > * {
+    margin-top: 2rem;
+}
+.text h1 {
+    font-size: 2rem;
+    font-weight: bolder;
+    rotate: -5deg;
+    
+}
+
+.text p:nth-child(2){
+    font-size: 1.2rem;
+    font-weight: bolder;
+   
+}
+.text p:nth-child(3){
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+
+
+.text {
+    box-shadow: 0px 1px 4px hsl(61, 27%, 45%, .1);
+}
+
+.s1{
+    color: purple;
+}
+.s2{
+    color: blue;
+}
+.x{
+    color: black;
+}
 .container {
     display: grid;
     grid-template-areas: 
                 "n"
                 "m"
+                "as"
                 "f"
     ;
 }
@@ -28,6 +68,7 @@ margin-top: 1rem;
 footer{grid-area: f;
 height: 200px;
 }
+aside{grid-area: as;}
 
 .hero{
     max-width: 1080px;
@@ -54,9 +95,11 @@ main{
 }
 nav ul{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 2rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 ul li:nth-child(1) a{
@@ -65,7 +108,7 @@ ul li:nth-child(1) a{
     color: black;
     font-size: 1.5rem;
     border-radius: .25rem;
-    padding: .2em .3em;
+    padding: .2em 1.2em;
 }
 ul li:nth-child(3) a{
     border: none;
@@ -90,6 +133,7 @@ ul li:nth-child(2) a{
 }
 .action button{
     border: none;
+    cursor: pointer;
     background-color: black;
     color: white;
     font-size: 2rem;
@@ -97,6 +141,41 @@ ul li:nth-child(2) a{
     padding: .2em .5em;
 }
 
+aside{
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+aside article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 8px 24px hsl(61, 27%, 45%, .5);
+    margin-top: 1rem;
+}
+aside article > * {
+    padding: 1rem;
+}
+
+aside article img{
+    width: 80%;
+}
+
+.les{
+    border: none;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    border-radius: .25rem;
+    padding: .2em .5em;
+    margin-bottom: 1rem;
+}
 footer {
     margin-top: .5rem;
     background: url("Footer.jpg");
@@ -110,7 +189,25 @@ footer {
         justify-content: space-around;
         align-items: center;
     }
-    .hero img{
-        
+ 
+    ul li:nth-child(1) a{
+        border: none;
+        background-color: #aece6e;
+        color: black;
+        font-size: 1.5rem;
+        border-radius: .25rem;
+        padding: .2em .4em;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    .text {
+        text-align: center;
+    }
+
+    aside article{
+        width: 40%;
     }
 }
